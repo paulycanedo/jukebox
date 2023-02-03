@@ -1,0 +1,870 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*Header*/
+
+.main-header {
+    background-color: black;
+    width: 100%;
+    height: 15rem;
+}
+
+.wrapper-header {
+    width: 80%;
+    height: 15rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+}
+
+.main-nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0.5rem 1rem;
+}
+
+#logo {
+    width: 25rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+    height: 100%;
+    vertical-align: center;
+}
+
+#nav-check{
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 2rem;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 20px;
+	background-color: black;
+	position: relative;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   left:0;
+}
+.nav-toggler span::before{
+	top: -6px;
+    background-color: black;
+}
+.nav-toggler span::after{
+	top: 6px;
+    background-color: black;
+}
+
+.button-subscribe {
+    text-decoration: none;
+    font-family:'Prompt', sans-serif; 
+    font-size: 1.4rem;
+    background-color: #D9003F;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 6rem;
+}
+
+.button-subscribe:hover {
+    background-color: #d9003da6;
+}
+
+.login-button {
+    text-decoration: none;
+    font-family:'Prompt', sans-serif; 
+    font-size: 1.4rem;
+    color: white;
+    border: 1px solid white;
+    padding: 1rem 4rem;
+    border-radius: 6rem;
+}
+
+.login-button:hover {
+    text-decoration: underline;
+}
+
+/*hero-section*/
+#hero-section {
+    width: 100%;
+    height: 85vh;
+    background: url(images/hero-background.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family:'Prompt', sans-serif; 
+    font-size: 8rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 350;
+    font-size: 2.4rem;
+    color: white;
+    text-align: center;
+}
+
+.button-subscribe-hero {
+    text-decoration: none;
+    font-family:'Prompt', sans-serif; 
+    font-size: 1.8rem;
+    background-color: #D9003F;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 6rem;
+    margin-top: 0.5rem;
+}
+
+.button-subscribe-hero:hover {
+    background-color: #f55a86;
+}
+
+/* Pricing section*/
+
+.pricing {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.pricing .content{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-items: center;
+}
+
+h2 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 4rem 0 0 0;
+}
+
+.content p{
+    font-family:'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 350;
+}
+
+.container-cards {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 5rem;
+}
+
+.container-cards .card {
+    background-color: white;
+    border-radius: 7rem;
+    border: solid 1px white;
+    width: 20%;
+    height: 35rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    margin: 3rem auto;
+    transition: .5s ease-in-out;
+}
+
+.container-cards .card .plan {
+    color: black;
+    font-family:'Prompt', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0 0;
+}
+
+.container-cards .card .price{
+    color: black;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 2rem; 
+    margin: 0.5rem 0 0 0;
+}
+
+.container-cards .card .plan-description {
+    color: black;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    list-style-type: none;
+    padding: 0 0 0 0;
+    margin-bottom: 1rem;
+}
+
+.container-cards .card .button-sign-up{
+    margin-top: 5rem;
+}
+
+.button-footer {
+    margin-top: 3rem;
+}
+
+/*Benefits section*/
+
+.container-benefits {
+    width: 100%;
+    height: 70vh;
+    background-image: url(images/background-benefits.png);
+    background-size: cover;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-cards-benefits {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 20rem;
+}
+
+
+.content h2 {
+    text-align: center;
+    color: white;
+}
+
+.container-cards-benefits .card-benefit{
+    width: 30%;
+    height: 35rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.container-cards-benefits .card-benefit .icon-container {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12rem;
+    align-self: center;
+    padding: 3rem;
+}
+
+.container-cards-benefits .card-benefit h3 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 4rem 0 0 0;
+    color: white;
+    text-align: center;
+}
+
+.container-cards-benefits .card-benefit p {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/*Favourite Artists Section*/
+
+.favourite-artists {
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 4rem;
+}
+
+.favourite-artists .content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.section-title {
+    font-family: 'Prompt', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 4rem 0 0 0;
+    text-align: center;
+}
+
+.container p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.albums-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.albums-container {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.gallery-container {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-container {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    align-content: center;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 6rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.gallery-item:hover img{
+    transform: scale(1.5);
+}
+
+/*footer*/
+
+.main-footer {
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.footer-wrapper {
+        width: 80%;
+        height: 10rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem auto;
+        background-color: rgb(0, 0, 0);
+    }
+
+/* Laptop design */
+
+@media screen and (min-width: 768px) and (max-width:1440px) {
+    
+    #hero-section {
+        width: 100%;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .pricing {
+        height: 130vh;
+    }
+
+    .container-cards .card {
+        width: 25%;
+    }
+
+    .container-benefits {
+        height: 100vh;
+    }
+
+    .container-cards-benefits {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .container-cards-benefits .card-benefit .icon-container img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .favourite-artists {
+        height: 160vh;
+    }
+
+    .main-footer {
+        height: 20vh;
+    }
+
+    .main-footer .footer-wrapper .logo-container img {
+        width: 14.7rem;
+        height: 2.9rem;
+    }
+
+    .main-footer .social-media-container img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Tablet design */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .nav-toggler{
+    	display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40%;
+        float: right;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    .nav-links{
+    	position: absolute;
+    	left:0;
+    	top:100%;
+    	width: 100%;
+    	border-top: 1px solid rgba(255,255,255,0.2);
+    	opacity:0;
+    	visibility: hidden;
+    }
+
+    .header .nav ul li{
+    	display: block;
+    	margin:0;
+    }
+    .header #nav-check:checked ~ .nav-links{
+       opacity: 10;
+       visibility: visible;
+    }
+    
+    .header #nav-check:checked ~ .nav-toggler span{
+    	background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+    	top:0;
+    	transform: rotate(45deg);
+        color: white;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+    	top:0;
+    	transform: rotate(-45deg);
+        color: white;
+    }
+
+
+    #hero-section {
+        width: 100%;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+        line-height: 6rem;
+    }
+
+    .content-container {
+        width: 80%;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .button-subscribe-hero {
+        font-size: 1.4rem;
+    }
+
+    .pricing {
+        height: 115vh;
+    }
+
+    .pricing .content h2 {
+        font-size: 3rem;
+    }
+
+    .pricing .content p {
+        font-size: 1.6rem;
+    }
+
+    .container-cards .card {
+        width: 30%;
+        height: 30rem;
+    }
+
+    .container-cards .card h3 {
+        font-size: 2rem;
+    }
+
+    .container-cards .card h4 {
+        font-size: 1.8rem;
+    }
+    .container-cards .card .plan-description {
+        font-size: 1.4rem;
+    }
+
+    .container-benefits {
+        width: 100%;
+        height: 110vh;
+    }
+
+    .container-benefits .content h2 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .container-cards-benefits {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .container-cards .card {
+            width: 30%;
+    }
+
+    .container-cards-benefits .card-benefit {
+        width: 33%;
+    }
+
+    .container-cards-benefits .card-benefit .icon-container img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .container-cards-benefits .card-benefit h3 {
+        font-size: 2rem;
+    }
+
+    .favourite-artists {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        height: 130vh;
+    }
+
+    .favourite-artists h3 {
+        font-size: 2.4rem;
+    }
+
+    .favourite-artists p {
+        font-size: 1.6rem;
+    }
+
+    .albums-container {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .gallery-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-footer {
+        height: 20vh;
+    }
+
+    .main-footer .footer-wrapper .logo-container img {
+        width: 14.7rem;
+        height: 2.9rem;
+    }
+
+    .main-footer .social-media-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+/* Mobile design */
+
+@media screen and (min-width: 320px) and (max-width:425px) {
+
+    .main-header {
+        height: 10rem;
+    }
+
+    .wrapper-header {
+        height: 10rem;
+        width: 90%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-header .logo-container {
+        margin: 0;
+        float: left;
+    }
+
+    #logo {
+        width: 20rem;
+        height: 4rem;
+        margin: 0;
+    }
+
+    #nav.check {
+        display: none;
+    }
+
+    .nav-toggler{
+    	float: right;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+    }
+
+    #hero-section {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .content-container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .subtitle {
+        font-size: 1.6rem;
+    }
+
+    .button-subscribe-hero {
+        font-size: 1.4rem;
+    }
+
+    .pricing {
+        height: 200vh;
+    }
+
+    .pricing .content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .pricing .content h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .pricing .content p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .container-cards .card {
+        width: 80%;
+        height: 25rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .container-cards .card h3 {
+        font-size: 2rem;
+    }
+
+    .container-cards .card h4 {
+        font-size: 1.8rem;
+    }
+    .container-cards .card .plan-description {
+        font-size: 1.4rem;
+    }
+
+    .container-benefits {
+        width: 100%;
+        height: 180vh;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .container-benefits .content h2{
+        margin-top: 4rem;
+    }
+
+    .container-benefits .container-cards-benefits .card-benefit {
+        width: 80%;
+        height: 50%;
+    }
+    
+    .favourite-artists {
+        display: flex;
+        width: 100%;
+        height: 130vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .favourite-artists .content {
+        width: 80%;
+        margin-bottom: 6rem;
+        margin-top: 0;
+    }
+
+    .favourite-artists .content h3 {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .favourite-artists .content p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .albums-container {
+        width: 80%;
+        height: 50%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .main-footer {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .main-footer .footer-wrapper .logo-container img {
+        width: 14.7rem;
+        height: 2.9rem;
+    }
+
+    .main-footer .social-media-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-wrapper {
+        width: 80%;
+        height: 10rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        background-color: rgb(0, 0, 0);
+        flex-direction: column;
+    }
+
+
+}
+
+
+
+
+
+
+
